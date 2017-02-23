@@ -214,7 +214,7 @@ if has('win16') || has('win32') || has ('win95') || has('win64')
     let s:macro_home = $HOME.'\marvim\' " under your documents and settings 
     let s:path_seperator = '\'
 else " assume UNIX based
-    let s:macro_home = $HOME."/.marvim/"
+    let s:macro_home = fnamemodify($MYVIMRC, ":h") . "/marvim/"
     let s:path_seperator = '/'
 endif
 
